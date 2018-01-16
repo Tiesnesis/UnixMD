@@ -14,7 +14,10 @@ startTime = time.time()
 collection = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # "U"
-hashToFind = "4c614360da93c0a041b22e537de151eb"
+# hashToFind = "4c614360da93c0a041b22e537de151eb"
+
+# "Ulvis"
+hashToFind = "463bfc4ae231915620c482a4885a5a98"
 
 comm = MPI.COMM_WORLD
 processCount = comm.Get_size()
@@ -64,4 +67,4 @@ else:
         print "Killing process:", process
         comm.send(received, dest=process, tag=11)
     endTime = time.time()
-    print "Solution was:",received," found in:", (endTime - startTime), " seconds ---"
+    print "Solution was:",received," found in:", (endTime - startTime), " seconds"
