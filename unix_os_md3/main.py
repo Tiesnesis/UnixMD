@@ -13,11 +13,8 @@ startTime = time.time()
 
 collection = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-# "U"
-# hashToFind = "4c614360da93c0a041b22e537de151eb"
-
-# "Ulvis"
-hashToFind = "463bfc4ae231915620c482a4885a5a98"
+stringToFind = sys.argv[1]
+hashToFind = hashlib.md5(stringToFind).hexdigest()
 
 comm = MPI.COMM_WORLD
 processCount = comm.Get_size()
